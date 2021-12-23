@@ -1,0 +1,7 @@
+[submodule "thirdparty/snek"]
+	path = thirdparty/snek
+	url = https://github.com/Abb1x/snek
+[submodule "thirdparty/limine"]
+	path = thirdparty/limine
+	url = https://github.com/limine-bootloader/limine
+	branch = latest-binary
