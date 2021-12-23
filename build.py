@@ -85,7 +85,7 @@ def link():
 	os.system(command)
 
 def run():
-	os.system("./scripts/make_image.sh")
+	os.system("./scripts/make_image.py")
 	os.system(f"qemu-system-x86_64 -M q35 -m 2G -cdrom pyOS.iso")
 
 if len(sys.argv) == 2:
