@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import sys
 
 files = ['src/main.py']
 asm_files = ['src/boot.asm']
@@ -87,8 +88,15 @@ def run():
 	os.system("./scripts/make_image.sh")
 	os.system(f"qemu-system-x86_64 -M q35 -m 2G -cdrom pyOS.iso")
 
+if len(sys.argv) == 2:
+    if sys.argv[1] == "clean":
+        os.system("rm -rf build kernel.elf pyOS.iso")
+        sys.exit(0)
+
 build_py()
 build_c()
 build_asm()
 link()
 run()
+
+
