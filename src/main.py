@@ -5,9 +5,7 @@ VGA_WHITE: int = 0x7
 
 # u16 is an unsigned 16-bit integer
 # It was added by Snek to allow for better portability & systems programming
-
 def print_to_vga(offset: int, character: u16, color: int):
-
     raw: u16 = (character) | color << 8
 
     # __builtin_write_mem is a special function that is used to write to memory
